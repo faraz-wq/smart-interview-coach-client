@@ -9,17 +9,22 @@ const Index = () => {
 
       {/* Animated background */}
       <div aria-hidden className="absolute inset-0 animated-gradient" />
+      <div aria-hidden className="absolute inset-0 animated-particles" />
 
-      {/* Centered minimal actions */}
+      {/* Centered content */}
       <section className="relative z-10 container min-h-screen flex items-center justify-center">
-        <h1 className="sr-only">AI Interview Coach</h1>
-        <div className="flex flex-col sm:flex-row items-center gap-4">
-          <Button asChild size="lg" variant="hero">
-            <Link to="/signup">Get Started</Link>
-          </Button>
-          <Button asChild size="lg" variant="outline">
-            <Link to="/login">Login</Link>
-          </Button>
+        <div className="text-center space-y-8">
+          <h1 className="text-6xl md:text-8xl font-bold tracking-tight animate-fade-in bg-gradient-to-r from-primary via-accent to-foreground bg-clip-text text-transparent">
+            Smart Interview Coach
+          </h1>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-scale-in">
+            <Button asChild size="lg" variant="hero" className="hover-scale">
+              <Link to="/signup">Get Started</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="hover-scale">
+              <Link to="/login">Login</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </main>
